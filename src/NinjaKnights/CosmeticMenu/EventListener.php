@@ -39,7 +39,7 @@ class EventListener implements Listener {
 		return false;
 	}
 
-	public function onJoin(PlayerJoinEvent $event){
+	/*public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
 		$player->removeAllEffects();
 		if($this->main->cosmeticItemSupport){
@@ -63,7 +63,7 @@ class EventListener implements Listener {
 		$skin = $player->getSkin();
 		$saveSkin = $this->main->saveSkin();
 		$saveSkin->saveSkin($skin, $name);
-	}
+	*/
 
 	public function onRespawn(PlayerRespawnEvent $event){
 		if($this->main->cosmeticItemSupport){
