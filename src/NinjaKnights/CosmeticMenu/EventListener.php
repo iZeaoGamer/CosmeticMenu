@@ -43,7 +43,6 @@ class EventListener implements Listener {
 		$player = $event->getPlayer();
 		$player->removeAllEffects();
 		if($this->main->cosmeticItemSupport){
-			if($player->hasPermission("cosmeticmenu.item")){
 				$this->main->reloadConfig();
 				$world = $this->main->config->get("WorldName");
 
@@ -58,11 +57,6 @@ class EventListener implements Listener {
 				} else {
 					$player->getInventory()->setItem($slot,$item,false);
 				}
-			} else {
-				$air = Item::get(0, 0 , 1);
-				$slot = $this->main->config->getNested("Cosmetic.Slot");
-				$player->getInventory()->setItem($slot,$air,true);
-			}
 		}
 
 		$name = $player->getName();
