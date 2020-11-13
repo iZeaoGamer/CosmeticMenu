@@ -85,8 +85,10 @@ class Main extends PluginBase implements Listener {
 	private $setskin;
 	private $saveskin;
 	private $resetskin;
+	static $instance;
 
 	public function onEnable() {
+		self::$instance = $this;
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 
 		$this->loadEvents();
@@ -249,6 +251,9 @@ class Main extends PluginBase implements Listener {
 			$this->morphSupport = false;
 		}
 		
+	}
+	static function getInstance(): self{
+		return self::$instance;
 	}
 
 	private function loadFormClass() : void {
