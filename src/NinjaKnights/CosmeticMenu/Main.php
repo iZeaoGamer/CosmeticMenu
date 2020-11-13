@@ -48,12 +48,12 @@ class Main extends PluginBase implements Listener {
 
 	public $world;
 
-	private $forms;
-	private $gadgets;
-	private $particles;
-	private $morphs;
-	private $trails;
-	private $suits;
+	public $forms;
+	public $gadgets;
+	public $particles;
+	public $morphs;
+	public $trails;
+	public $suits;
 
 	public $tntCooldown = [ ];
 	public $tntCooldownTime = [ ];
@@ -82,9 +82,9 @@ class Main extends PluginBase implements Listener {
 	public $hat1 = array("TV Hat");
 	public $hat2 = array("Melon Hat");
 
-	private $setskin;
-	private $saveskin;
-	private $resetskin;
+	public $setskin;
+	public $saveskin;
+	public $resetskin;
 	static $instance;
 
 	public function onEnable() {
